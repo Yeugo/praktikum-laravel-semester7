@@ -11,7 +11,7 @@
             <a href="{{ route('kustomers.create') }}" class="btn btn-md btn-success mb-3">ADD KUSTOMER</a>
             <div class="row">
                 <table class="table table-bordered data-table">
-                    <thead>
+                    <thead> 
                         <tr>
                             <th scope="col">NIK</th>
                             <th scope="col">NAME</th>

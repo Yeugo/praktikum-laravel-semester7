@@ -18,15 +18,17 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 // user
 Route::get('/users', [UserController::class, 'users'])->name('users');
-Route::get('printpdf', [UserController::class, 'printPDF'])->name('printuser');
+Route::get('printuser', [UserController::class, 'printPDF'])->name('printuser');
 Route::get('printexcell', [UserController::class, 'userExcell'])->name('exportuser');
 
 
 // product
 Route::resource('/products', ProductController::class);
+Route::get('printproduct', [ProductController::class, 'printPDF'])->name('printproduct');
 
 // kategori
 Route::resource('/kategoris', KategoriController::class);
+Route::get('printkategori', [KategoriController::class, 'printPDF'])->name('printkategori');
 
 // satuan
 Route::resource('/satuans', SatuanController::class);

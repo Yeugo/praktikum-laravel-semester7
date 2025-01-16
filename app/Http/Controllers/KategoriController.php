@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kategori;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -79,5 +80,18 @@ class KategoriController extends Controller
         //redirect to index
         return redirect()->route('kategoris.index')->with(['success' =>
         'Data Berhasil Dihapus!']);
+    }
+
+    public function printPdf()
+    {
+        $kategoris = Kategori::get();
+        $data = [
+            'title' => 'Welcome To fti.uniska-bjm ac.id',
+            'date' => date('m/d/Y'),
+            'kategoris' => $kategoris
+        ];
+        $pdf = PDF::loadview('kategoris.kategoriPdf', $data);
+        $pdf->setPaper('A4','landscape');
+        return $pdf->stream('Data User.pdf',array("attachment" =>false));
     }
 }

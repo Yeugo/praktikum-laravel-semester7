@@ -9,9 +9,9 @@
     </ol>
     <div class="card mb-4">
         <div class="card-body">
-            <a href="{{ route('products.create') }}" class="btn btn-md
-
-btn-success mb-3">ADD PRODUCT</a>
+            
+            <a href="{{ route('products.create') }}" class="btn btn-md btn-success mb-3">ADD PRODUCT</a>
+            <a href="{{ route('printproduct') }}" class="btn btn-md btn-warning mb-3">Print Product</a>
             <div class="row">
                 <table class="table table-bordered data-table">
                     <thead>
@@ -30,9 +30,7 @@ btn-success mb-3">ADD PRODUCT</a>
                         @forelse ($products as $product)
                         <tr>
                             <td class="text-center">
-                                <img src="{{
-
-asset('/storage/products/'.$product->image) }}" class="rounded" style="width: 100px">
+                                <img src="{{ asset('/storage/products/'.$product->image) }}" class="rounded" style="width: 100px">
 
                             </td>
                             <td>{{ $product->title }}</td>

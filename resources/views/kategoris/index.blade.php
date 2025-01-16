@@ -9,9 +9,13 @@
     </ol>
     <div class="card mb-4">
         <div class="card-body">
-            <a href="{{ route('kategoris.create') }}" class="btn btn-md
-
-btn-success mb-3">ADD KATEGORI</a>
+            <div class="card-header">
+                <a href="{{ route('kategoris.create') }}" class="btn btn-md btn-success mb-3">ADD KATEGORI</a>
+                <div class="float-end">
+                    <a href="{{ route('printkategori') }}" class="btn btn-md btn-warning mb-3">Print Kategori</a>
+                </div>
+            </div>
+            
             <div class="row">
                 <table class="table table-bordered data-table">
                     <thead>
