@@ -8,12 +8,24 @@
                 </a>
                 <div class="sb-sidenav-menu-heading">MENU</div>
                 <a class="nav-link {{ Route::is('users') ? 'active' : '' }}" href="{{ route('users') }}">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
-                    Users
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>
+                    User
                 </a>
                 <a class="nav-link {{ request()->routeIs('products.*') ? 'active' : '' }}" href="{{ route('products.index') }}">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-bag-shopping"></i></div>
-                    Products
+                    Produk
+                </a>
+                <a class="nav-link {{ request()->routeIs('kategoris.*') ? 'active' : '' }}" href="{{ route('kategoris.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-tags"></i></div>
+                    Kategori
+                </a>
+                <a class="nav-link {{ request()->routeIs('satuans.*') ? 'active' : '' }}" href="{{ route('satuans.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-usd"></i></div>
+                    Satuan
+                </a>
+                <a class="nav-link {{ request()->routeIs('kustomers.*') ? 'active' : '' }}" href="{{ route('kustomers.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
+                    Kustomer
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
@@ -21,46 +33,6 @@
                         <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                     </nav>
                 </div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                    Pages
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                            Authentication
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="login.html">Login</a>
-                                <a class="nav-link" href="register.html">Register</a>
-                                <a class="nav-link" href="password.html">Forgot Password</a>
-                            </nav>
-                        </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                            Error
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="401.html">401 Page</a>
-                                <a class="nav-link" href="404.html">404 Page</a>
-                                <a class="nav-link" href="500.html">500 Page</a>
-                            </nav>
-                        </div>
-                    </nav>
-                </div>
-                <div class="sb-sidenav-menu-heading">Addons</div>
-                <a class="nav-link" href="charts.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    Charts
-                </a>
-                <a class="nav-link" href="tables.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Tables
-                </a>
             </div>
         </div>
         <div class="sb-sidenav-footer">

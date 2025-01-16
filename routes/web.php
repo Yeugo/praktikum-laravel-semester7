@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\KustomerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SatuanController;
 use App\Models\User;
 
 Route::get('/', function () {
@@ -21,5 +24,14 @@ Route::get('printexcell', [UserController::class, 'userExcell'])->name('exportus
 
 // product
 Route::resource('/products', ProductController::class);
+
+// kategori
+Route::resource('/kategoris', KategoriController::class);
+
+// satuan
+Route::resource('/satuans', SatuanController::class);
+
+// kustomer
+Route::resource('/kustomers', KustomerController::class);
 
 
